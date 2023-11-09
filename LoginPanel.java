@@ -20,6 +20,10 @@ public class LoginPanel extends JPanel{
         txtcontraseña.setBounds(ancho/2-150, alto/2 -150,200,40);
         add(txtcontraseña);
 
+        ImageIcon icon = new ImageIcon("C:\\Users\\santo\\Desktop\\imagen\\userr.jpeg");
+        JLabel lbl = new JLabel(icon);
+        lbl.setBounds(ancho/2 , alto/2 ,100,100);
+        add(lbl);
 
 
     }

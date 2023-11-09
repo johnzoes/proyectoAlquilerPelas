@@ -21,8 +21,7 @@ public class LoginPanel extends JPanel{
         add(txtcontraseña);
 
         lbl = new JLabel();
-        ImageIcon icon = new ImageIcon("C:\\Users\\santo\\Desktop\\imagen\\user.jpeg");
-
+        ImageIcon icon = new ImageIcon("proyectoAlquilerPelas//imagen//pngusuario.png");
             int labelWidth = 100;
           int labelHeight = 100;
    

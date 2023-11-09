@@ -7,17 +7,19 @@ import java.awt.*;
 public class LoginPanel extends JPanel{
     JTextField txtusuario, txtcontraseña;
     JLabel lbl;
+    Font f1 = new Font("Corbel", 0,20);
     public LoginPanel(){
         setLayout(null);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int ancho = (int) screenSize.getWidth();
         int alto = (int) screenSize.getHeight();
-
+        this.setBackground(new Color(0,38,85));
         txtusuario = new JTextField();
-        txtusuario.setBounds(ancho/2-150, alto/2 -70,200,40);
+        txtusuario.setFont(f1);
+        txtusuario.setBounds(ancho/2-150, alto/2 -150,200,40);
         add(txtusuario);
         txtcontraseña = new JTextField();
-        txtcontraseña.setBounds(ancho/2-150, alto/2 -150,200,40);
+        txtcontraseña.setBounds(ancho/2-150, alto/2 -70,200,40);
         add(txtcontraseña);
 
         lbl = new JLabel();

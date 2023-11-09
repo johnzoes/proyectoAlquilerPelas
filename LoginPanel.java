@@ -9,16 +9,31 @@ public class LoginPanel extends JPanel{
     JLabel lbl;
     JButton btnIngresar;
     public LoginPanel(){
-        setLayout(new GridLayout(3,2));
+        setLayout(new GridBagLayout());
+        GridBagConstraints constraints = new GridBagConstraints();
+
         txtusuario = new JTextField(20);
-        add(txtusuario);
 
-        txtcontraseña = new JTextField(10);
-        add(txtcontraseña);
+        txtcontraseña = new JPasswordField(20);
 
-        btnIngresar=new JButton("Ingresar");
-        btnIngresar.setBounds(50, 50, 50, 30);
-        btnIngresar.addActionListener(this);
-        add(btnIngresar);
+    JButton loginButton = new JButton("Iniciar Sesión");
+
+    constraints.insets = new Insets(5, 0, 5,5 );
+
+        constraints.gridx = 1;
+        constraints.gridy = 0;
+        constraints.gridheight = 2;
+        add(txtusuario, constraints);
+
+        constraints.gridx = 1;
+        constraints.gridy = 1;
+        add(txtcontraseña, constraints);
+
+        constraints.gridx = 0;
+        constraints.gridy = 2;
+        constraints.gridwidth = 2;
+        constraints.anchor = GridBagConstraints.CENTER;
+        add(loginButton, constraints);
+
     }
 }

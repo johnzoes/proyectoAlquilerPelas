@@ -8,6 +8,7 @@ public class LoginPanel extends JPanel{
     JLabel lbl,lblusuario,lblpass;
     JButton btnPanel2;
     Font f1 = new Font("Corbel", Font.BOLD,20);
+    JButton btnLogear;
 
     //PANEL USUARIO
     public LoginPanel(){
@@ -60,5 +61,11 @@ public class LoginPanel extends JPanel{
 
         lbl.setBounds(ancho/2-100 , alto/2 -300 ,100,100);
         add(lbl);
+        btnLogear= new JButton("Ingresar");
+        btnLogear.setBounds(550,400,150,30);
+        
+        add(btnLogear);
+
+
     }
 }

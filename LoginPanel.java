@@ -7,6 +7,7 @@ public class LoginPanel extends JPanel{
     JTextField txtusuario, txtcontraseña;
     JLabel lbl;
     Font f1 = new Font("Corbel", 0,20);
+
     public LoginPanel(){
         setLayout(null);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();

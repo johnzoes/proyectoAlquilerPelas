@@ -1,13 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
-//import java.awt.event.ActionEvent;
-//import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class LoginPanel extends JPanel{
     JTextField txtusuario, txtcontraseña;
-    JLabel lbl;
-    Font f1 = new Font("Corbel", 0,20);
+    JLabel lbl,lblusuario,lblpass;
+    JButton btnPanel2;
+    Font f1 = new Font("Corbel", Font.BOLD,20);
 
+    //PANEL USUARIO
     public LoginPanel(){
         setLayout(null);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -22,19 +24,41 @@ public class LoginPanel extends JPanel{
         txtcontraseña.setBounds(ancho/2-150, alto/2 -70,200,40);
         add(txtcontraseña);
 
-        lbl = new JLabel();
-        ImageIcon icon = new ImageIcon("proyectoAlquilerPelas//imagen//pngusuario.png");
-            int labelWidth = 100;
-          int labelHeight = 100;
-   
-            Image image = icon.getImage().getScaledInstance(labelWidth, labelHeight, Image.SCALE_SMOOTH);
-            ImageIcon resizedIcon = new ImageIcon(image);
+        lblusuario = new JLabel("Usuario");
+        lblusuario.setBounds(600,200,100,20);
+        lblusuario.setFont(f1);
+        add(lblusuario);
 
-            lbl.setIcon(resizedIcon);
+        lblpass=new JLabel("Password");
+        lblpass.setBounds(590 ,290,100,20);
+        lblpass.setFont(f1);
+        add(lblpass);
+
+        //CAMBIO DE PANEL A PANEL 2
+        btnPanel2=new JButton("Continuar");
+        btnPanel2.setBounds(ancho / 2 - 75, alto / 2 + 50, 150, 40);
+        add(btnPanel2);
+        btnPanel2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(LoginPanel.this);
+                frame.getContentPane().removeAll();
+                frame.getContentPane().add(new OtroPanel());
+                frame.revalidate();
+                frame.repaint();
+            }
+        });
+        //IMAGEN LOG IN
+        lbl = new JLabel();
+        ImageIcon icon = new ImageIcon("C:\\Users\\ALEX PUA\\Desktop\\proyectoMiabuelo\\proyectoAlquilerPelas\\imagen\\pngusuario.png");
+        int labelWidth = 100;
+        int labelHeight = 100;
+   
+        Image image = icon.getImage().getScaledInstance(labelWidth, labelHeight, Image.SCALE_SMOOTH);
+        ImageIcon resizedIcon = new ImageIcon(image);
+
+        lbl.setIcon(resizedIcon);
 
         lbl.setBounds(ancho/2-100 , alto/2 -300 ,100,100);
         add(lbl);
-
-
     }
 }

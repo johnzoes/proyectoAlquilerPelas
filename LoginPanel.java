@@ -5,6 +5,7 @@ import java.awt.*;
 
 public class LoginPanel extends JPanel{
     JTextField txtusuario, txtcontraseña;
+    JButton btnLogear;
     JLabel lbl;
     Font f1 = new Font("Corbel", 0,20);
 
@@ -34,6 +35,10 @@ public class LoginPanel extends JPanel{
 
         lbl.setBounds(ancho/2-100 , alto/2 -300 ,100,100);
         add(lbl);
+        btnLogear= new JButton("Ingresar");
+        btnLogear.setBounds(550,400,150,30);
+        
+        add(btnLogear);
 
 
     }

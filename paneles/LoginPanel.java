@@ -12,16 +12,13 @@ public class LoginPanel extends JPanel{
     Font f1 = new Font("Corbel", Font.BOLD,20);
     Color c1 = new Color(0,38,85);
 
-  public  Font getFont()
-  {  
-   return f1;
- }
+    public  Font getFont(){  
+        return f1;
+    }
 
-  
-public Color getColor()
-{
-    return c1;
-}
+    public Color getColor(){
+        return c1;
+    }
 
 
     //PANEL USUARIO
@@ -75,8 +72,5 @@ public Color getColor()
 
         lbl.setBounds(ancho/2-100 , alto/2 -300 ,100,100);
         add(lbl);
-
-
-
     }
 }

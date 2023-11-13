@@ -1,3 +1,4 @@
+package paneles;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,24 +11,27 @@ public class CarteleraPanel extends JPanel {
 ActionEvent e;
     public CarteleraPanel(LoginPanel lp) {
         this.lp = lp;
-        setLayout(new FlowLayout()); // Utilizar un LayoutManager apropiado
+        setLayout(null); // Utilizar un LayoutManager apropiado
 
         this.setBackground(lp.getColor());
 
         lblPeliculas = new JLabel("Películas");
         lblPeliculas.setFont(lp.getFont());
         lblPeliculas.setForeground(Color.white);
+        lblPeliculas.setBounds(10,10,100,20);
         add(lblPeliculas);
 
         lblSeries = new JLabel("Series");
         lblSeries.setForeground(Color.white);
         lblSeries.setFont(lp.getFont());
+     lblSeries.setBounds(150,10,100,20);
+
         add(lblSeries);
 
-        btn1 = createButton("imgPelis\\df.jpg", 100, 120);
+        btn1 = createButton("proyectoAlquilerPelas\\imgPelis\\df.jpg", 0,0,100, 120);
         add(btn1);
 
-        btn2 = createButton("imgPelis\\interstellar.jpg", 100, 120);
+        btn2 = createButton("proyectoAlquilerPelas\\imgPelis\\interstellar.jpg",110,0,100, 120);
         add(btn2);
         btn2.addActionListener(new ActionListener() {
           @Override
@@ -36,18 +40,19 @@ ActionEvent e;
           }
       });
 
-        btn3 = createButton("imgPelis\\susi.jpg", 100, 120);
+        btn3 = createButton("proyectoAlquilerPelas\\imgPelis\\susi.jpg", 110*2,0,100, 120);
         add(btn3);
 
-        btn4 = createButton("imgPelis\\fnaf.jpg", 100, 120);
+        btn4 = createButton("proyectoAlquilerPelas\\imgPelis\\fnaf.jpg",110*3,0, 100*2, 120*2);
         add(btn4);
 
         // Puedes seguir agregando más botones si es necesario
     }
 
-    private JButton createButton(String imagePath, int imgWidth, int imgHeight) {
+    private JButton createButton(String rutaimg,int x, int y ,int imgWidth, int imgHeight) {
         JButton button = new JButton();
-        ImageIcon icon = new ImageIcon(imagePath);
+        button.setBounds(10 + x, 30 + y, imgWidth, imgHeight );
+        ImageIcon icon = new ImageIcon(rutaimg);
         Image image = icon.getImage().getScaledInstance(imgWidth, imgHeight, Image.SCALE_SMOOTH);
         ImageIcon resizedIcon = new ImageIcon(image);
         button.setIcon(resizedIcon);

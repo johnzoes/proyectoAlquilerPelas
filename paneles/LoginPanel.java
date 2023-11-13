@@ -1,4 +1,6 @@
+package paneles;
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -6,19 +8,20 @@ import java.awt.event.ActionListener;
 public class LoginPanel extends JPanel{
     JTextField txtusuario, txtcontraseña;
     JLabel lbl,lblusuario,lblpass;
-    JButton btnPanel2, btnLogear;
+    JButton btnPanel2;
     Font f1 = new Font("Corbel", Font.BOLD,20);
     Color c1 = new Color(0,38,85);
 
-    public Font getFont(){  
-        return f1;
-    }
+  public  Font getFont()
+  {  
+   return f1;
+ }
 
   
-    public Color getColor()
-    {
-        return c1;
-    }
+public Color getColor()
+{
+    return c1;
+}
 
 
     //PANEL USUARIO
@@ -72,9 +75,8 @@ public class LoginPanel extends JPanel{
 
         lbl.setBounds(ancho/2-100 , alto/2 -300 ,100,100);
         add(lbl);
-        btnLogear= new JButton("Ingresar");
-        btnLogear.setBounds(550,400,150,30);
-        
-        add(btnLogear);
+
+
+
     }
 }

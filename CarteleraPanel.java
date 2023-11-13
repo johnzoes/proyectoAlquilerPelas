@@ -24,10 +24,10 @@ ActionEvent e;
         lblSeries.setFont(lp.getFont());
         add(lblSeries);
 
-        btn1 = createButton("proyectoAlquilerPelas\\imgPelis\\df.jpg", 100, 120);
+        btn1 = createButton("imgPelis\\df.jpg", 100, 120);
         add(btn1);
 
-        btn2 = createButton("proyectoAlquilerPelas\\imgPelis\\interstellar.jpg", 100, 120);
+        btn2 = createButton("imgPelis\\interstellar.jpg", 100, 120);
         add(btn2);
         btn2.addActionListener(new ActionListener() {
           @Override
@@ -36,10 +36,10 @@ ActionEvent e;
           }
       });
 
-        btn3 = createButton("proyectoAlquilerPelas\\imgPelis\\susi.jpg", 100, 120);
+        btn3 = createButton("imgPelis\\susi.jpg", 100, 120);
         add(btn3);
 
-        btn4 = createButton("proyectoAlquilerPelas\\imgPelis\\fnaf.jpg", 100, 120);
+        btn4 = createButton("imgPelis\\fnaf.jpg", 100, 120);
         add(btn4);
 
         // Puedes seguir agregando más botones si es necesario

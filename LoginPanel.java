@@ -62,7 +62,7 @@ public Color getColor()
         });
         //IMAGEN LOG IN
         lbl = new JLabel();
-        ImageIcon icon = new ImageIcon("proyectoAlquilerPelas\\imagen\\pngusuario.png");
+        ImageIcon icon = new ImageIcon("imagen\\pngusuario.png");
         int labelWidth = 100;
         int labelHeight = 100;
    

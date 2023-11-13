@@ -6,9 +6,21 @@ import java.awt.event.ActionListener;
 public class LoginPanel extends JPanel{
     JTextField txtusuario, txtcontraseña;
     JLabel lbl,lblusuario,lblpass;
-    JButton btnPanel2;
+    JButton btnPanel2, btnLogear;
     Font f1 = new Font("Corbel", Font.BOLD,20);
-    JButton btnLogear;
+    Color c1 = new Color(0,38,85);
+
+  public  Font getFont()
+  {  
+   return f1;
+ }
+
+  
+public Color getColor()
+{
+    return c1;
+}
+
 
     //PANEL USUARIO
     public LoginPanel(){
@@ -43,14 +55,14 @@ public class LoginPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(LoginPanel.this);
                 frame.getContentPane().removeAll();
-                frame.getContentPane().add(new OtroPanel());
+                frame.getContentPane().add(new CarteleraPanel(LoginPanel.this));
                 frame.revalidate();
                 frame.repaint();
             }
         });
         //IMAGEN LOG IN
         lbl = new JLabel();
-        ImageIcon icon = new ImageIcon("C:\\Users\\ALEX PUA\\Desktop\\proyectoMiabuelo\\proyectoAlquilerPelas\\imagen\\pngusuario.png");
+        ImageIcon icon = new ImageIcon("proyectoAlquilerPelas\\imagen\\pngusuario.png");
         int labelWidth = 100;
         int labelHeight = 100;
    
